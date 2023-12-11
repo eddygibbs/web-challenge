@@ -666,7 +666,9 @@ ul, li {
 #ContactUs .submit-btn button:hover {
 	background-color: rgba(0,152,170,0.8);
 }
+
 /* footer style goes here */
+
 #Footer {
 	background-color: rgba(0, 0, 0, 0.9);
 	padding: 50px 0;
@@ -776,7 +778,24 @@ h2.in-view {
     top: 0;
 }
 
-#glow-paragraph {
-    opacity: 1; /* Start with full opacity */
-    transition: opacity 0.5s ease-in-out; /* Apply transition effect */
+/* Add this to your existing CSS file or create a new one */
+#notification {
+    display: none;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 15px; /* Padding */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 1; /* Set a higher z-index to make sure it's on top of other elements */
+    animation: slideIn 0.5s ease-in-out; /* Add a slide-in animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }

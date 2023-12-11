@@ -1,0 +1,37 @@
+/* Add this to your existing CSS file or create a new one */
+#notification {
+    display: none;
+    background-color: #4CAF50; /* Green background color */
+    border-radius: 13px;
+    color: white; /* White text color */
+    padding: 15px; /* Padding */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    z-index: 1; /* Set a higher z-index to make sure it's on top of other elements */
+    animation: fadeInOut 3s ease-in-out 0s 1 normal forwards; /* Blinking effect for 2 seconds */
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#notification::before {
+    content: '\2713'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

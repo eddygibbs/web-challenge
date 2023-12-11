@@ -26,6 +26,9 @@
     <!-- favicons -->
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/notification.css">
+
     <link rel="stylesheet" type="text/css" href="css/custom-responsive-style.css">
     <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
@@ -33,6 +36,11 @@
     <script type="text/javascript" src="script/plugin-active.js"></script>
     <script type="text/javascript" src="script/new.js"></script>
     <script type="text/javascript" src="script/writer.js"></script>
+
+
+    <script type="text/javascript" src="script/display.js"></script>
+
+
 </head>
 <body data-spy="scroll" data-target=".main-navigation" data-offset="150">
     <section id="MainContainer">
@@ -71,7 +79,7 @@
                 <div class="hero-content">
                     <h1 id="typed-text">Rise to the Web Challenge</h1>
                     <p id="glow-paragraph">"Design Your Digital Destiny"</p>
-                    <a href="#Services" class="hero-cta">Get Started</a>
+                    <a href="http://forms.gle/J8uzYpQZZuCUyfvu9" class="hero-cta">Get Started</a>
                 </div>
                 </section>
 
@@ -329,10 +337,12 @@
                             <span class="c-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span> <span class="c-info">eddygibbsmayanja@gmail.com</span>
                         </div>
                     </div>
+
+
                     <div class="form-wrap">
                         <p class="add-title">Send Us Message</p>
 
-                        <form action="dbconnect.php" method="POST">
+                        <form id="myForm" action="dbconnect.php" method="POST">
                             <div class="fname floating-label">
                                 <input type="text" class="floating-input" name="full name" id="full-name-field" required/>
                                 <label for="full-name-field">Full Name</label>
@@ -354,9 +364,17 @@
                                 <label for="user-msg-field" class="msg-label">Your Message</label>
                             </div>
                             <div class="submit-btn">
-                                <button type="submit">Submit</button>
+
+                                <button type="button" onclick="submitForm()">Submit</button>
                             </div>
+
+                            <div id="notification" style="display: none;">
+                                <!-- Notification content goes here -->
+                                Message submitted successfully!
+                            </div>
+
                         </form>
+                       
                     </div>
                 </div>
             </div>
@@ -387,6 +405,8 @@
         </footer>
         <!-- Footer section ends here -->
     </section>
+
+
 </body>
 
 </html>

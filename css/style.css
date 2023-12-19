@@ -723,7 +723,7 @@ ul, li {
     grid-template-columns: 1fr 1fr; /* Two columns */
     gap: 20px; /* Gap between grid items */
     text-align: center;
-    margin: 0 150px; /* Margin added to the right and left sides of the grid container */
+   
 }
 
 .grid-item {
